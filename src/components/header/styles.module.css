@@ -19,6 +19,8 @@ header {
 .headerInner .menuIcon {
   width: 22.5px;
   height: 15px;
+
+  margin-top: 5px;
 }
 
 .headerInner .logoCorebiz {
@@ -50,6 +52,8 @@ header {
   width: 95%;
 
   margin-bottom: .3rem;
+
+  font-family: Nunito;
 }
 
 .formHeader .lupaIcon {
