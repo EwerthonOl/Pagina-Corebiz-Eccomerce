@@ -1,0 +1,19 @@
+.buttonBlack{
+  background-color: #000;
+  color: #FFFF;
+
+  width: 140px;
+  height: 36px;
+
+  border: none;
+  border-radius: 6px;
+
+  font-family: Ubuntu;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: center;
+  
+  cursor: pointer;
+}
