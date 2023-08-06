@@ -1,21 +1,19 @@
-header {
-  width: 100%;
-  height: 80px;
-
-  padding: .5rem 1.5rem;
-}
-
+/* COMPONENTE HEADER QUE ENGLOBA TODOS OS OUTROS ELEMENTOS */
 .headerInner { 
-  width: 100%;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
 
-  margin-bottom: 1rem;
+  width: 100%;
+  height: 80px;
+
+  padding: .5rem 1rem;
+  margin-bottom: .3rem;
 }
 
+/* ICONE HAMBURGUER MENU*/
 .headerInner .menuIcon {
   width: 22.5px;
   height: 15px;
@@ -23,30 +21,81 @@ header {
   margin-top: 5px;
 }
 
+/* LOGO COREBIZ */
 .headerInner .logoCorebiz {
   width: 109px;
   height: 25px;
+
+  cursor: pointer;
 }
 
+/* DIV DE LOGO DO USUARIO E MINHA CONTA */
+.headerInner .divUser {
+  flex-direction: row;
+  display: none;
+}
+
+/* LOGO USER */
+.headerInner .divUser .logoConta {
+  margin-right: .3rem;
+}
+
+/* P  DE MINHA CONTA */
+.headerInner .divUser .pConta {
+  font-family: Nunito;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+}
+
+/* DIV DO CARRINHO E QUANTIDADE DE ITEM */
+.headerInner .divCart {
+  display: flex;
+
+  cursor: pointer;
+}
+
+/* NUMERO DE ITENS NO CARRINHO */
+.headerInner .divCart .pCart {
+  background-color: #F8475F;
+  color: #FFF;
+  
+  border-radius: 50%;
+
+  text-align: center;
+
+  width: 14px;
+  height: 15px;
+
+  font-family: Nunito;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 14px;
+
+  margin-left: .3rem;
+}
+
+/* LOGO DO CARRINHO */
 .headerInner .cartIcon {
   width: 18px;
   height: 18px;
 }
 
-.headerInner .cartIcon {
-  width: 18px;
-  height: 18px;
-}
-
+/* FORMULARIO COM O INPUT DA HEADER */
 .formHeader {
   width: 100%;
 
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 
   border-bottom: 1px solid #7A7A7A;
+
+  margin-top: 1rem;
 }
 
+/* INPUT DO FORMULARIO */
 .formHeader .inputForm {
   border:none;
   width: 95%;
@@ -56,7 +105,97 @@ header {
   font-family: Nunito;
 }
 
+/* ICONE DE LUPA */
 .formHeader .lupaIcon {
   width: 18px;
   height: 18px;
+}
+
+@media only screen and (min-width: 520px) {  
+  /* COMPONENTE HEADER QUE ENGLOBA TODOS OS OUTROS ELEMENTOS */
+  .headerInner {
+    padding: .5rem 3rem;;
+  }
+
+  /* ICONE HAMBURGUER MENU*/
+  .headerInner .menuIcon {
+    display: none;
+
+    cursor: pointer;
+  }
+
+  /* DIV DE LOGO DO USUARIO E MINHA CONTA */
+  .headerInner .divUser {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 1024px) { 
+  /* COMPONENTE HEADER QUE ENGLOBA TODOS OS OUTROS ELEMENTOS */
+  .headerInner{
+    padding: 0rem 5rem;
+
+    height: 80px;
+  }
+
+  /* LOGO COREBIZ */
+  .headerInner .logoCorebiz {
+    order: 1;
+
+    width: 181px;
+    height: 41px;
+  }
+
+  /* DIV DE LOGO DO USUARIO E MINHA CONTA */
+  .headerInner .divUser {
+    order: 3;
+
+    width: 97px;
+    height: 20px;
+  }
+
+  /* DIV DO CARRINHO E QUANTIDADE DE ITEM */
+  .headerInner .divCart {
+    order: 4;
+
+    width: 37;
+    height: 18px ;
+  }
+
+  /* FORMULARIO COM O INPUT DA HEADER */
+  .headerInner .formHeader {
+    order: 2;
+
+    width: 60%;
+    height: 23px;
+
+    margin-top: 0;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  /* COMPONENTE HEADER QUE ENGLOBA TODOS OS OUTROS ELEMENTOS */
+  .headerInner{
+   justify-content: center;
+  }
+
+  /* LOGO COREBIZ */
+  .headerInner .logoCorebiz {
+    margin-right: 3rem;
+  }
+
+  /* DIV DE LOGO DO USUARIO E MINHA CONTA */
+  .headerInner .divUser {
+    margin-right: 1rem;
+  }
+
+  /* FORMULARIO COM O INPUT DA HEADER */
+  .headerInner .formHeader {
+    margin-right: 2rem;
+  }
 }
