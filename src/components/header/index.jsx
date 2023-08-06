@@ -11,7 +11,7 @@ import { CartContext } from "../../contexts/cart"
 
 export const Header = () => {
   //CONTEXTO DA QUANTIDADE DE ITENS NO CARRINHO
-  const {quant} = useContext(CartContext)
+  const {quant, setQuant} = useContext(CartContext)
 
   //COMPONENTE
   return (
@@ -30,7 +30,13 @@ export const Header = () => {
 
         {/* CARRINHO E QUANTIDADE ITENS */}
         <div className={styles.divCart}>
-          <img className={styles.cartIcon} src={cartIcon} alt="Carrinho de compras" />
+          <img className={styles.cartIcon} src={cartIcon} alt="Carrinho de compras" 
+            //CLICK NO CARRINHO ZERA ELE E O LOCAL STORAGE
+            onClick={() =>{
+              setQuant(0)
+              localStorage.clear()
+            }}
+          />
           {quant > 0 ? <p className={styles.pCart}>{quant}</p> : ""} 
         </div>
 
