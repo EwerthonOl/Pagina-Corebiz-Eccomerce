@@ -14,11 +14,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+
+  max-width: 195px;
 }
-
-/* .buttonWhite .imgButton {
-
-} */
 
 .buttonWhite .textButton {
   font-family: Nunito;
@@ -28,4 +26,12 @@
   text-align: left;
 
   width: 70%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .buttonWhite:hover {
+    background-color: #e0dada;
+
+    transition-delay: .3s linear;
+  }
 }
