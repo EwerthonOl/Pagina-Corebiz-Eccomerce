@@ -1,0 +1,66 @@
+/* COMPONENTE SESSAO QUE ENGLOBA TODOS OS OUTROS*/
+.sectionCarrousel {
+  padding: 1.5rem 1rem 2rem 1rem;
+}
+
+/* HEADER QUE CONTEM DOIS ELEMENTOS DENTRO */
+.sectionCarrousel .headerCarrousel {
+  width: fit-content;
+  height: 34px;
+
+  margin-bottom: 1rem;
+}
+
+/* TITULO DA HEADER */
+.sectionCarrousel .headerCarrousel .strongHeader{
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 27px;
+  text-align: left;  
+}
+
+/* LINHA ABAIXO DO TITULO */
+.sectionCarrousel .headerCarrousel .lineGrey{
+  align-self: flex-start;
+
+  width: 32px;
+  height: 3px;
+
+  background-color: #C0C0C0;
+
+  margin-top: 3px;
+
+  border: none;
+}
+
+/* SLIDES DO SWIPER */
+.sectionCarrousel .divSwipper .swiperContainer .swiperSlide {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  /* HEADER QUE CONTEM DOIS ELEMENTOS DENTRO */
+  .sectionCarrousel .headerCarrousel {
+    margin-left: 1rem;
+  }
+
+  .sectionCarrousel {
+    margin-left: 11rem;
+    margin-right: 11rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  /* COMPONENTE SESSAO QUE ENGLOBA TODOS OS OUTROS*/
+  .sectionCarrousel {
+    margin-left: 7rem;
+    margin-right: 7rem;
+  }
+
+  /* HEADER QUE CONTEM DOIS ELEMENTOS DENTRO */
+  .sectionCarrousel .headerCarrousel {
+    margin-left: 3.5rem;
+  }
+}
