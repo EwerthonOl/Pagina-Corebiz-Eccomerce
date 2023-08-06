@@ -93,6 +93,13 @@ footer .divImgsCoreVtex .logoCorebiz .pCreated {
   text-align: left;
 }
 
+@media only screen and (min-width: 520px) {
+  /* DIV DOS BOTES BRANCOS */
+  footer .divButtonsWhite {
+    align-items: center;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   /* COMPONENTE FOOTER QUE ENGLOBA TODOS OS OUTROS ELEMENTOS */
   footer {
