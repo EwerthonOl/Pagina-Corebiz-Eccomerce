@@ -1,5 +1,5 @@
 /* COMPONENTE HEADER QUE ENGLOBA TODOS OS OUTROS ELEMENTOS */
-.headerInner { 
+.headerInner {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,10 +7,12 @@
   flex-wrap: wrap;
 
   width: 100%;
+  max-width: 90vw;
   height: 80px;
 
+  margin: 0 auto;
+
   padding: .5rem 1rem;
-  margin-bottom: .3rem;
 }
 
 /* ICONE HAMBURGUER MENU*/
@@ -60,7 +62,7 @@
 .headerInner .divCart .pCart {
   background-color: #F8475F;
   color: #FFF;
-  
+
   border-radius: 50%;
 
   text-align: center;
@@ -97,7 +99,7 @@
 
 /* INPUT DO FORMULARIO */
 .formHeader .inputForm {
-  border:none;
+  border: none;
   width: 95%;
 
   margin-bottom: .3rem;
@@ -111,10 +113,10 @@
   height: 18px;
 }
 
-@media only screen and (min-width: 520px) {  
+@media only screen and (min-width: 520px) {
   /* COMPONENTE HEADER QUE ENGLOBA TODOS OS OUTROS ELEMENTOS */
   .headerInner {
-    padding: .5rem 3rem;;
+    padding: .5rem 3rem;
   }
 
   /* ICONE HAMBURGUER MENU*/
@@ -127,16 +129,18 @@
   /* DIV DE LOGO DO USUARIO E MINHA CONTA */
   .headerInner .divUser {
     display: flex;
-    flex-direction: row;
 
     align-items: center;
     cursor: pointer;
+
+    position: relative;
+    margin-left: auto;
   }
 }
 
-@media only screen and (min-width: 1024px) { 
+@media only screen and (min-width: 1024px) {
   /* COMPONENTE HEADER QUE ENGLOBA TODOS OS OUTROS ELEMENTOS */
-  .headerInner{
+  .headerInner {
     padding: 0rem 5rem;
 
     height: 80px;
@@ -156,46 +160,38 @@
 
     width: 97px;
     height: 20px;
+
+    margin-left: 2rem;
   }
 
   /* DIV DO CARRINHO E QUANTIDADE DE ITEM */
   .headerInner .divCart {
     order: 4;
 
-    width: 37;
-    height: 18px ;
+    width: 37px;
+    height: 18px;
   }
 
   /* FORMULARIO COM O INPUT DA HEADER */
   .headerInner .formHeader {
     order: 2;
 
-    width: 60%;
+    width: 50%;
+    max-width: 718px;
     height: 23px;
 
+    margin-left: auto;
     margin-top: 0;
   }
 
 }
 
 @media only screen and (min-width: 1200px) {
+
   /* COMPONENTE HEADER QUE ENGLOBA TODOS OS OUTROS ELEMENTOS */
-  .headerInner{
-   justify-content: center;
-  }
-
-  /* LOGO COREBIZ */
-  .headerInner .logoCorebiz {
-    margin-right: 3rem;
-  }
-
-  /* DIV DE LOGO DO USUARIO E MINHA CONTA */
-  .headerInner .divUser {
-    margin-right: 1rem;
-  }
-
-  /* FORMULARIO COM O INPUT DA HEADER */
-  .headerInner .formHeader {
-    margin-right: 2rem;
+  .headerInner {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
   }
 }
