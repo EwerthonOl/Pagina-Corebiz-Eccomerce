@@ -4,14 +4,14 @@ import { useContext } from "react"
 import { CartContext } from "../../contexts/cart"
 
 export const ButtonBlack = () => {
-  const {quant, setQuant} = useContext(CartContext)
+  const { quant, setQuant } = useContext(CartContext)
 
   //QUANTIDADE DE ITENS DO CARRINHO PARA ADICIONAR NO LOCALSTORAGE
   let quantItemCarrinho = null;
 
   //ADICIONAR +1 COMPRA AO CARRINHO, VERIFICANDO AS QUANTIDADE ANTERIOR NO LOCALSTORAGE
-  function changeQuantItem(){
-    if(localStorage.getItem("quantidadeItemCarinho") != null){
+  function changeQuantItem() {
+    if (localStorage.getItem("quantidadeItemCarinho") != null) {
       quantItemCarrinho = Number(localStorage.getItem("quantidadeItemCarinho"))
     }
 
@@ -21,11 +21,10 @@ export const ButtonBlack = () => {
   }
 
   return (
-    <button className={styles.buttonBlack} onClick={()=>
-      {
-        setQuant(quant+1)
-        changeQuantItem()
-      }
+    <button className={styles.buttonBlack} onClick={() => {
+      setQuant(quant + 1)
+      changeQuantItem()
+    }
     }>
       COMPRAR
     </button>

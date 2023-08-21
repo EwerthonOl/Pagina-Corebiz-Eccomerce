@@ -1,9 +1,9 @@
-.buttonBlack{
+.buttonBlack {
   background-color: #000;
   color: #FFFF;
 
-  width: 140px;
-  height: 36px;
+  width: 115px;
+  height: 32px;
 
   border: none;
   border-radius: 6px;
@@ -14,7 +14,7 @@
   line-height: 18px;
   letter-spacing: 0em;
   text-align: center;
-  
+
   cursor: pointer;
 }
 
