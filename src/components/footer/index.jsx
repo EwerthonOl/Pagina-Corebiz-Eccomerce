@@ -1,4 +1,4 @@
-import styles from "./styles.module.css" 
+import styles from "./styles.module.css"
 
 import logoCorebizBranco from '../../assets/logo-corebiz-branco.svg'
 import vtexIcon from '../../assets/vtex-icon.svg'
@@ -12,36 +12,42 @@ export const Footer = () => {
   //COMPONENTE
   return (
     <footer>
-      {/* HEADER LOCALIZAÇÃO */}
-      <div className={styles.divLocalHr}>
-        <strong className={styles.strongLocal}>Localização</strong>
-      
-        <hr className={styles.lineWhite} />
+      {/* SECTION QUE CONTEM TODOS OS ITENS INTERNOS */}
+      <section className={styles.sectionFooter}>
+        {/* DIV QUE CONTEM O LOCAL E OS BOTOES BRANCOS */}
+        <div className={styles.divLocalEButtons}>
+          {/* HEADER LOCALIZAÇÃO */}
+          <article className={styles.divLocalHr}>
+            <strong className={styles.strongLocal}>Localização</strong>
 
-        {/* TEXTO DE ENDEREÇO */}
-        <div className={styles.divAdress}>
-          <p className={styles.pAdress}>Avenida Andrômeda, 2000. Bloco 6 e 8</p>
-          <p className={styles.pAdress}>Alphavile SP</p>
-          <p className={styles.pAdress}>brasil@corebiz.ag</p>
-          <p className={styles.pAdress}>+55 11 3090 1039</p>
-        </div>
-      </div>
+            <hr className={styles.lineWhite} />
 
-      {/* //BOTOES BRANCOS */}
-      <div className={styles.divButtonsWhite}>
-        <ButtonWhite className={styles.buttonWhite} icon={mailIcon} text="ENTRE EM CONTATO" textAlternative="Icone de email"/>
-        <ButtonWhite icon={foneIcon} text="FALE COM O NOSSO CONSULTOR ONLINE" textAlternative="Icone de fone"/>
-      </div>
- 
-      {/* LOGOS FOOTER */}
-      <div className={styles.divImgsCoreVtex}>
-        <div className={styles.logoCorebiz}>
-          <p className={styles.pCreated}>Created by</p>
-          <img className={styles.imgCorebiz} src={logoCorebizBranco} alt="Logo da empresa Corebiz" />
+            {/* TEXTO DE ENDEREÇO */}
+            <address className={styles.divAdress}>
+              <p className={styles.pAdress}>Avenida Andrômeda, 2000. Bloco 6 e 8</p>
+              <p className={styles.pAdress}>Alphavile SP</p>
+              <p className={styles.pAdress}>brasil@corebiz.ag</p>
+              <p className={styles.pAdress}>+55 11 3090 1039</p>
+            </address>
+          </article>
+
+          {/* //BOTOES BRANCOS */}
+          <article className={styles.divButtonsWhite}>
+            <ButtonWhite className={styles.buttonWhite} icon={mailIcon} text="ENTRE EM CONTATO" textAlternative="Icone de email, botão para entrar em contato com a empresa." />
+            <ButtonWhite icon={foneIcon} text="FALE COM O NOSSO CONSULTOR ONLINE" textAlternative="Icone de fone, botão para falar com o consultor." />
+          </article>
         </div>
 
-        <img src={vtexIcon} alt="Logo da empresa Vtex" />
-      </div>
+        {/* LOGOS FOOTER */}
+        <article className={styles.divImgsCoreVtex}>
+          <figure className={styles.logoCorebiz}>
+            <figcaption className={styles.pCreated}>Created by</figcaption>
+            <img className={styles.imgCorebiz} src={logoCorebizBranco} alt="Logo da empresa Corebiz" />
+          </figure>
+
+          <img src={vtexIcon} alt="Logo da empresa Vtex" />
+        </article>
+      </section>
     </footer>
   )
 }

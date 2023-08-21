@@ -2,22 +2,31 @@
 footer {
   background-color: #000;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  padding: 1.5rem 1rem 0.3rem 1rem;
+  padding: 1.5rem 0 0.3rem 0;
 
   border-bottom: 6px solid #C0C0C0;
 }
 
+footer .sectionFooter {
+  max-width: 80vw;
+
+  margin: 0 auto;
+}
+
+footer .sectionFooter .divLocalEButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
 /* DIV QUE CONTEM O TEXTO DE LOCALIZAÇÃO */
-footer .divLocalHr {
+footer .sectionFooter .divLocalEButtons .divLocalHr {
   align-self: flex-start;
 }
 
 /* TITULO DE LOCALIZAÇÃO */
-footer .strongLocal {
+footer .sectionFooter .divLocalEButtons .divLocalHr .strongLocal {
   color: #FFF;
 
   font-family: Nunito;
@@ -27,7 +36,7 @@ footer .strongLocal {
 }
 
 /* LINHA BRANCA ABAIXO DA LOCALIZAÇÃO */
-footer .lineWhite {
+footer .sectionFooter .divLocalEButtons .divLocalHr .lineWhite {
   align-self: flex-start;
 
   width: 32px;
@@ -39,12 +48,12 @@ footer .lineWhite {
 }
 
 /* DIV QUE CONTEM INFORMAÇÕES DA LOCALIDADE */
-footer .divAdress {
+footer .sectionFooter .divLocalEButtons .divLocalHr .divAdress {
   align-self: flex-start;
 }
 
 /* PARAGRAFOS DAS INFORMAÇÕES DE LOCALIDADE */
-footer .divAdress .pAdress {
+footer .sectionFooter .divLocalEButtons .divLocalHr .divAdress .pAdress {
   font-family: Nunito;
   font-size: 13px;
   font-weight: 400;
@@ -57,33 +66,30 @@ footer .divAdress .pAdress {
 }
 
 /* DIV DOS BOTES BRANCOS */
-footer .divButtonsWhite {
+footer .sectionFooter .divLocalEButtons .divButtonsWhite {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
 
   width: 100%;
-  height: 165px;
-
-  padding: 2rem 2.5rem 0rem 2.5rem;
+  max-width: 195px;
+  height: 101px;
+  
+  margin: 4rem 0rem 2rem 0rem;
 }
 
 /* DIV DAS LOGOS CORE E VTEX */
-footer .divImgsCoreVtex {
-  margin-left: 20px;
-  margin-right: 20px;
+footer .sectionFooter .divImgsCoreVtex {
   margin-bottom: 5px;
-
   width: 100%;
 
   display: flex;
   justify-content: space-between;
-
-  padding: .5rem 1.8rem 0rem 1.8rem;
 }
 
 /* TEXTO DO LOGO COREBIZ */
-footer .divImgsCoreVtex .logoCorebiz .pCreated {
+footer .sectionFooter .divImgsCoreVtex .logoCorebiz .pCreated {
   color: #FFF;
 
   font-family: Nunito;
@@ -93,51 +99,43 @@ footer .divImgsCoreVtex .logoCorebiz .pCreated {
   text-align: left;
 }
 
-@media only screen and (min-width: 520px) {
+@media only screen and (min-width: 580px) {
   /* DIV DOS BOTES BRANCOS */
-  footer .divButtonsWhite {
-    align-items: center;
+  footer .sectionFooter .divLocalEButtons .divButtonsWhite {
+    margin: 0;
+  }
+
+  footer .sectionFooter .divLocalEButtons {
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-bottom: 4rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  /* COMPONENTE FOOTER QUE ENGLOBA TODOS OS OUTROS ELEMENTOS */
-  footer {
-    flex-direction: row;
-
-    height: 213px;
-
-    justify-content: center;
-
-    gap: 2rem;
-  }
-
-  /* DIV QUE CONTEM O TEXTO DE LOCALIZAÇÃO */
-  footer .divLocalHr {
-    align-self: flex-start;
-
-    width: 238px;
-    height: 160px;
-  }
-
-  /* DIV DOS BOTES BRANCOS */
-  footer .divButtonsWhite {
+  footer .sectionFooter {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-  
-    width: 195px;
-    height: 101px ;
-  
-    padding: 0;
+    align-items: center;
+
+    margin-bottom: 1rem;
+  }
+
+  footer .sectionFooter .divLocalEButtons {
+    width: 67%;
+    
+    margin-bottom: 0;
   }
 
   /* DIV DAS LOGOS CORE E VTEX */
-  footer .divImgsCoreVtex {
+  footer .sectionFooter .divImgsCoreVtex {
     margin: 0;
     padding: 0;
 
-    width: 158.2px;
+    width: 25%;
+    max-width: 158.2px;
     height: 35px;
 
     display: flex;
@@ -145,15 +143,14 @@ footer .divImgsCoreVtex .logoCorebiz .pCreated {
   }
 }
 
-@media only screen and (min-width: 1200px) {
-  /* COMPONENTE FOOTER QUE ENGLOBA TODOS OS OUTROS ELEMENTOS */
-  footer {
-    gap: 0;
+@media only screen and (min-width: 1024px) {
+  footer .sectionFooter {
+    max-width: 70vw;
   }
-  
-  /* DIV DOS BOTES BRANCOS */
-  footer .divButtonsWhite {
-    margin-left: 10rem;
-    margin-right: 10rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  footer .sectionFooter .divLocalEButtons {
+    width: 60%;
   }
 }
