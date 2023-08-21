@@ -7,12 +7,10 @@
   flex-wrap: wrap;
 
   width: 100%;
-  max-width: 90vw;
+  max-width: 80vw;
   height: 80px;
 
   margin: 0 auto;
-
-  padding: .5rem 1rem;
 }
 
 /* ICONE HAMBURGUER MENU*/
@@ -114,10 +112,6 @@
 }
 
 @media only screen and (min-width: 520px) {
-  /* COMPONENTE HEADER QUE ENGLOBA TODOS OS OUTROS ELEMENTOS */
-  .headerInner {
-    padding: .5rem 3rem;
-  }
 
   /* ICONE HAMBURGUER MENU*/
   .headerInner .menuIcon {
@@ -140,11 +134,10 @@
 }
 
 @media only screen and (min-width: 1024px) {
+
   /* COMPONENTE HEADER QUE ENGLOBA TODOS OS OUTROS ELEMENTOS */
   .headerInner {
-    padding: 0rem 5rem;
-
-    height: 80px;
+    max-width: 70vw;
   }
 
   /* LOGO COREBIZ */
@@ -168,9 +161,6 @@
   /* DIV DO CARRINHO E QUANTIDADE DE ITEM */
   .headerInner .divCart {
     order: 4;
-
-    width: 37px;
-    height: 18px;
   }
 
   /* FORMULARIO COM O INPUT DA HEADER */
