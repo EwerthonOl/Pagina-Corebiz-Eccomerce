@@ -1,4 +1,4 @@
-import styles from "./styles.module.css" 
+import styles from "./styles.module.css"
 
 import bannerCell from '../../assets/banner-cell.svg'
 import bannePc from "../../assets/banner.svg"
@@ -12,7 +12,7 @@ export const CarrouselEcommerce = () => {
   useEffect(() => {
     setImgSrc(window.innerWidth >= 520 ? bannePc : bannerCell);
 
-    window.addEventListener("resize", () => 
+    window.addEventListener("resize", () =>
       setImgSrc(window.innerWidth >= 520 ? bannePc : bannerCell));
 
     return window.removeEventListener("resize", () =>
@@ -22,7 +22,7 @@ export const CarrouselEcommerce = () => {
 
   return (
     <section className={styles.sectionCarrousel}>
-      <img className={styles.imgCarrousel} src={imgSrc} alt="" />
+      <img className={styles.imgCarrousel} src={imgSrc} alt="Imagem de marketing da empresa" />
     </section>
   )
 }
