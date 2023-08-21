@@ -23,7 +23,7 @@ export const SectionProducts = () => {
   useEffect(() => {
     setSlides(getSlides(window.innerWidth));
 
-    window.addEventListener("resize", () => 
+    window.addEventListener("resize", () =>
       setSlides(getSlides(window.innerWidth)));
 
     return window.removeEventListener("resize", () =>
@@ -32,7 +32,7 @@ export const SectionProducts = () => {
   }, []);
 
   //FAZER A REQUISIÇÃO DOS PRODUTOS A SEREM LISTADOS
-  useEffect( 
+  useEffect(
     () => {
       const getProducts = async () => {
 
@@ -40,14 +40,14 @@ export const SectionProducts = () => {
           method: 'GET',
           redirect: 'follow'
         };
-        
+
         fetch("https://fakestoreapi.com/products", requestOptions)
           .then(response => response.json())
           .then(result => setProducts(result))
           .catch(error => console.log('error', error));
       }
-      
-      getProducts()      
+
+      getProducts()
     }, []
   )
 
@@ -68,21 +68,19 @@ export const SectionProducts = () => {
           spaceBetween={20}
           slidesPerView={slides}
           pagination={{ clickable: true }}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
           className={styles.swiperContainer}
         >
-          {products.map(product => 
-          <SwiperSlide key={product.id} className={styles.swiperSlide}>
-            <ProductCard  
-              image={product.image} 
-              title={product.title} 
-              rating={product.rating} 
-              price={product.price} 
-              category={product.category} 
-              description={product.description}
-            />
-          </SwiperSlide>
+          {products.map(product =>
+            <SwiperSlide key={product.id} className={styles.swiperSlide}>
+              <ProductCard
+                image={product.image}
+                title={product.title}
+                rating={product.rating}
+                price={product.price}
+                category={product.category}
+                description={product.description}
+              />
+            </SwiperSlide>
           )}
         </Swiper>
       </div>
