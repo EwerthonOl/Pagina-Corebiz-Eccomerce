@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from 'react'
+import PropTypes from 'prop-types';
 
 export const CartContext = createContext({})
 
@@ -12,10 +13,12 @@ export const CartProvider = ({ children }) => {
 
     localStorage.getItem("quantidadeItemCarinho") != null ? quantItemCarrinho = localStorage.getItem("quantidadeItemCarinho") : ""
 
-    console.log(quantItemCarrinho)
-
     quantItemCarrinho != null && quant == 0 ? setQuant(Number(quantItemCarrinho)) : ""
-  })
+  }, [quant])
+  
+  CartProvider.propTypes = {
+    children: PropTypes.node.isRequired
+  }
 
   return (
     <CartContext.Provider value={{ quant, setQuant }}>
@@ -23,3 +26,4 @@ export const CartProvider = ({ children }) => {
     </CartContext.Provider>
   )
 }
+
