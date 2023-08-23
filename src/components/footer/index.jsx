@@ -17,7 +17,7 @@ export const Footer = () => {
         {/* DIV QUE CONTEM O LOCAL E OS BOTOES BRANCOS */}
         <div className={styles.divLocalEButtons}>
           {/* HEADER LOCALIZAÇÃO */}
-          <article className={styles.divLocalHr}>
+          <article className={styles.divLocalHr} title="Informações da localização da empresa">
             <strong className={styles.strongLocal}>Localização</strong>
 
             <hr className={styles.lineWhite} />
@@ -32,14 +32,14 @@ export const Footer = () => {
           </article>
 
           {/* //BOTOES BRANCOS */}
-          <article className={styles.divButtonsWhite}>
-            <ButtonWhite className={styles.buttonWhite} icon={mailIcon} text="ENTRE EM CONTATO" textAlternative="Icone de email, botão para entrar em contato com a empresa." />
+          <article className={styles.divButtonsWhite} title="Botões de entrar em contato e o de falar com o consultor">
+            <ButtonWhite className={styles.buttonWhite} icon={mailIcon} text="ENTRE EM CONTATO" textAlternative="Icone de email, botão para entrar em contato com a empresa."/>
             <ButtonWhite icon={foneIcon} text="FALE COM O NOSSO CONSULTOR ONLINE" textAlternative="Icone de fone, botão para falar com o consultor." />
           </article>
         </div>
 
         {/* LOGOS FOOTER */}
-        <article className={styles.divImgsCoreVtex}>
+        <article className={styles.divImgsCoreVtex} title="Logos das empresas">
           <figure className={styles.logoCorebiz}>
             <figcaption className={styles.pCreated}>Created by</figcaption>
             <img className={styles.imgCorebiz} src={logoCorebizBranco} alt="Logo da empresa Corebiz" />
