@@ -17,19 +17,19 @@ export const Header = () => {
   return (
     <header className={styles.headerInner}>
       {/* IMAGEM HAMBURGER MENU */}
-      <img className={styles.menuIcon} src={menuIcon} alt="Menu do site" />
+      <img className={styles.menuIcon} src={menuIcon} alt="Menu do site" title="Icone para o menu do site"/>
 
       {/* LOGO COREBIZ */}
-      <img className={styles.logoCorebiz} src={logoCorebiz} alt="Logo Corebiz" />
+      <img className={styles.logoCorebiz} src={logoCorebiz} alt="Logo Corebiz" title="Logo da empresa"/>
 
       {/* CAMPO DO USUARIO E ICON */}
-      <div className={styles.divUser}>
+      <article className={styles.divUser} title="Botão de acesso a conta do usuário">
         <img className={styles.logoConta} src={logoConta} alt="Logo Conta" />
         <p className={styles.pConta}>Minha Conta</p>
-      </div>
+      </article>
 
       {/* CARRINHO E QUANTIDADE ITENS */}
-      <div className={styles.divCart}>
+      <article className={styles.divCart} title="Limpar carrinho">
         <img className={styles.cartIcon} src={cartIcon} alt="Carrinho de compras"
           //CLICK NO CARRINHO ZERA ELE E O LOCAL STORAGE
           onClick={() => {
@@ -38,10 +38,10 @@ export const Header = () => {
           }}
         />
         {quant > 0 ? <p className={styles.pCart}>{quant}</p> : ""}
-      </div>
+      </article>
 
       {/* INPUT DO QUE ESTÁ PROCURANDO */}
-      <form className={styles.formHeader}>
+      <form className={styles.formHeader} title="Campo de busca dentro do site">
         <input type="text" placeholder="O que está procurando?" className={styles.inputForm} />
         <img className={styles.lupaIcon} src={lupaIcon} alt="Lupa de pesquisa" />
       </form>
