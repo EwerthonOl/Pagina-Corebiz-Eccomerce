@@ -2,6 +2,7 @@ import styles from './styles.module.css'
 
 import { getSlides } from "../../utils/functions"
 
+import AtomicSpinner from 'atomic-spinner'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
@@ -15,9 +16,10 @@ import { ProductCard } from "../product-card"
 
 export const SectionProducts = () => {
 
-  //ESTADOS PARA MUDAR PRODUTOS E QUANTIDADE DE SLIDES
+  //ESTADOS PARA MUDAR PRODUTOS E QUANTIDADE DE SLIDES E LOADINGS
   const [products, setProducts] = useState([])
   const [slides, setSlides] = useState(2);
+  const [isLoading, setIsLoading] = useState(false);
 
   //MUDAR QUANTIDADE DE SLIDES DE ACORDO COM O WIDTH DA TELA
   useEffect(() => {
@@ -34,8 +36,9 @@ export const SectionProducts = () => {
   //FAZER A REQUISIÇÃO DOS PRODUTOS A SEREM LISTADOS
   useEffect(
     () => {
-      const getProducts = async () => {
+      setIsLoading(true)
 
+      const getProducts = async () => {
         var requestOptions = {
           method: 'GET',
           redirect: 'follow'
@@ -43,8 +46,14 @@ export const SectionProducts = () => {
 
         fetch("https://fakestoreapi.com/products", requestOptions)
           .then(response => response.json())
-          .then(result => setProducts(result))
-          .catch(error => console.log('error', error));
+          .then(result => {
+            setProducts(result)
+            setIsLoading(false)
+          })
+          .catch(error => {
+            console.log('error', error)
+            setIsLoading(false)
+          });
       }
 
       getProducts()
@@ -55,35 +64,46 @@ export const SectionProducts = () => {
   return (
     <section className={styles.sectionCarrousel}>
       {/* CABEÇALHO */}
-      <header className={styles.headerCarrousel}>
+      <header className={styles.headerCarrousel} title="Produtos mais vendidos">
         <p className={styles.strongHeader}>Mais Vendidos</p>
         <hr className={styles.lineGrey} />
       </header>
 
-      {/* SLIDES DE PRODUTOS */}
-      <div className={styles.divSwipper}>
-        {/* COMPONENTE DE SLIDES DO REACT */}
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={20}
-          slidesPerView={slides}
-          pagination={{ clickable: true }}
-          className={styles.swiperContainer}
-        >
-          {products.map(product =>
-            <SwiperSlide key={product.id} className={styles.swiperSlide}>
-              <ProductCard
-                image={product.image}
-                title={product.title}
-                rating={product.rating}
-                price={product.price}
-                category={product.category}
-                description={product.description}
-              />
-            </SwiperSlide>
-          )}
-        </Swiper>
-      </div>
+      {isLoading ?
+        /* COMPONENTE DE SLIDES DO REACT */
+        <div className={styles.loading}><AtomicSpinner /></div>
+        :
+        /* /* SLIDES DE PRODUTOS */
+        <article className={styles.divSwipper} title="Produtos e suas informações">
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={20}
+            slidesPerView={slides}
+            navigation={true}
+            pagination={{ clickable: true, dynamicBullets:true}}
+            className={styles.swiperContainer}
+            style={{
+              "--swiper-navigation-color": "#F8475F",
+              "--swiper-pagination-color": "#F8475F",
+              "--swiper-navigation-size": "22px"
+            }}
+          >
+            {products.map(product =>
+              <SwiperSlide key={product.id} className={styles.swiperSlide}>
+                <ProductCard
+                  image={product.image}
+                  title={product.title}
+                  rating={product.rating}
+                  price={product.price}
+                  category={product.category}
+                  description={product.description}
+                />
+              </SwiperSlide>
+            )}
+          </Swiper>
+        </article>
+        
+      }
     </section>
   )
 }

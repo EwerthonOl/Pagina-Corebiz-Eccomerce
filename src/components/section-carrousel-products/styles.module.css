@@ -7,6 +7,11 @@
   padding: 1rem 0;
 }
 
+.sectionCarrousel .loading {
+  display: flex;
+  justify-content: center;
+}
+
 /* HEADER QUE CONTEM DOIS ELEMENTOS DENTRO */
 .sectionCarrousel .headerCarrousel {
   width: fit-content;
@@ -49,9 +54,4 @@
   .sectionCarrousel {
     width: 70vw;
   }
-}
-
-@media only screen and (min-width: 1200px) {
-
-
 }
