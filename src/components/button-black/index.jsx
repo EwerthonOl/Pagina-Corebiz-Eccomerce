@@ -21,11 +21,13 @@ export const ButtonBlack = () => {
   }
 
   return (
-    <button className={styles.buttonBlack} onClick={() => {
-      setQuant(quant + 1)
-      changeQuantItem()
-    }
-    }>
+    <button className={styles.buttonBlack}
+      onClick={() => {
+        setQuant(quant + 1)
+        changeQuantItem()
+        scrollTo({behavior:"smooth", top})
+      }
+      }>
       COMPRAR
     </button>
   )

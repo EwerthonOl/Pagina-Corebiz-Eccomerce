@@ -10,7 +10,10 @@ export const ButtonWhite = ({ icon, text, textAlternative }) => {
   }
 
   return (
-    <button className={styles.buttonWhite}>
+    <button className={styles.buttonWhite}
+      onClick={() => {
+        scrollTo({ behavior: "smooth", top })
+      }} >
       <img className={styles.imgButton} src={icon} alt={textAlternative} />
       <p className={styles.textButton}>{text}</p>
     </button>
