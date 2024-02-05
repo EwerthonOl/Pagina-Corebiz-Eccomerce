@@ -2,16 +2,16 @@
 
 PROJETO FEITO COM REACT USANDO VITE
 
-CLONE O REPOSITORIO COM: git clone https://github.com/EwerthonOl/corebiz-test.git
+CLONE O REPOSITORIO COM: `git clone https://github.com/EwerthonOl/Pagina-Corebiz-Eccomerce`
 
-APÓS ISSO, ABRA A PASTA DO PROJETO E INICIE AS DEPENDENCIAS DO PROJETO PELO TERMINAL COM: npm install
+APÓS ISSO, ABRA A PASTA DO PROJETO E INICIE AS DEPENDENCIAS DO PROJETO PELO TERMINAL COM: `npm install`
 
-ENTÃO, RODE O SITE COM: npm run dev
+ENTÃO, RODE O SITE COM: `npm run dev`
 
 AO INICIAR PODE SER ABERTO A PÁGINA COM O COMANDO NO TERMINAL DO VITE: o
-OU CLICANDO NO LINK DO LOCAL QUE APARECE NO TERMINAL, QUE É: http://127.0.0.1:5173/
+OU CLICANDO NO LINK DO LOCAL QUE APARECE NO TERMINAL, QUE É: `http://127.0.0.1:5173/`
 
-ONLINE ON: https://ewerthonol.github.io/corebiz-test/
+ONLINE ON: `https://github.com/EwerthonOl/Pagina-Corebiz-Eccomerce`
 
 ---
 
